@@ -11,6 +11,8 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
 
+import { HeroImagesPipe } from './pipes/hero-images.pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,11 @@ import { CardComponent } from './components/card/card.component';
     ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
-    CardComponent
+    CardComponent,
+
+
+    //Pipes
+    HeroImagesPipe
   ],
   imports: [
     CommonModule,
