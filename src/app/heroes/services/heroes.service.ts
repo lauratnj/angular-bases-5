@@ -46,7 +46,7 @@ export class HeroesService {
       .pipe(
         catchError( err => of(false) ),
         map( resp => true )
-      );      ;
+      );
   }
 
 

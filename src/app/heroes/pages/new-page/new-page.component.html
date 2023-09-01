@@ -13,13 +13,17 @@
     <mat-card>
       <mat-card-content>
 
-        <div class="grid">
+        <!-- Ha conectado el formulario reactivo con la parte de  [formGroup]="heroForm" que viene del archivo .ts -->
+        <!-- Para conectar cada input utiliza formControlName="name_property" el nombre que colocamos entre las comillas es que hemos asignado en public heroForm dentro del formGroup en el archivo .ts-->
+
+        <form class="grid" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
           <mat-form-field class="col-12 sm:col-6">
             <mat-label>Super héroe</mat-label>
             <input
               matInput
               type="text"
               required
+              formControlName="superhero"
             />
           </mat-form-field>
 
@@ -29,6 +33,7 @@
               matInput
               type="text"
               required
+              formControlName="alter_ego"
             />
           </mat-form-field>
 
@@ -38,6 +43,7 @@
               matInput
               type="text"
               required
+              formControlName="first_appearance"
             />
           </mat-form-field>
 
@@ -47,32 +53,47 @@
               matInput
               type="text"
               required
+              formControlName="characters"
             />
           </mat-form-field>
 
           <mat-form-field class="col-12">
             <mat-label>Creador</mat-label>
-            <mat-select required="">
-              <mat-option *ngFor="let publisher of publishers"
-                [value]="publisher.id">
-                {{ publisher.desc }}
-              </mat-option>
+            <mat-select
+            required=""
+            formControlName="publisher"
+            >
+            <mat-option *ngFor="let publisher of publishers"
+            [value]="publisher.id">
+            {{ publisher.desc }}
+            </mat-option>
             </mat-select>
           </mat-form-field>
-        </div>
+
+          <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+            matInput
+            type="text"
+            formControlName="alt_img"
+            />
+          </mat-form-field>
+
+        </form>
 
         <div class="flex justify-content-between">
           <button
             mat-flat-button
             color="warn"
-            >
+          >
             Borrar
           </button>
 
           <button
             mat-flat-button
             color="primary"
-            >
+            (click)="onSubmit()"
+          >
             <mat-icon>save</mat-icon>
             Guardar
           </button>
