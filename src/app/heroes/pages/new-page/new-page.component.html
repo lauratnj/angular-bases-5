@@ -60,13 +60,13 @@
           <mat-form-field class="col-12">
             <mat-label>Creador</mat-label>
             <mat-select
-            required=""
-            formControlName="publisher"
+              formControlName="publisher"
+              required
             >
-            <mat-option *ngFor="let publisher of publishers"
-            [value]="publisher.id">
-            {{ publisher.desc }}
-            </mat-option>
+              <mat-option *ngFor="let publisher of publishers"
+                [value]="publisher.id">
+                {{ publisher.desc }}
+              </mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -106,7 +106,7 @@
   <div class="col-12 sm:col-6">
 
     <mat-card>
-      <img src="" alt="imagen del héroe" mat-card-image>
+      <img [src]="currentHero | heroImages" alt="imagen del héroe" mat-card-image>
     </mat-card>
 
   </div>

@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://content.eccediciones.com/productos/5265/superman_80.jpg"
     },
     {
       "id": "dc-flash",
@@ -166,6 +167,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "B2Is5UK",
+      "superhero": "Laura",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Picón",
+      "first_appearance": "Cómic 2021",
+      "characters": "Laura",
+      "alt_img": "https://www.kamekame.es/33327-large_default/spiderwoman-03-vuelta-a-los-origenes-comic.jpg"
     }
   ]
 }
