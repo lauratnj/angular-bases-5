@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
@@ -14,6 +14,14 @@
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
       "characters": "Bruce Wayne"
+    },
+    {
+      "id": "dc-superman",
+      "superhero": "Superman",
+      "publisher": "DC Comics",
+      "alter_ego": "Kal-El",
+      "first_appearance": "Action Comics #1",
+      "characters": "Kal-El"
     },
     {
       "id": "dc-flash",
@@ -158,15 +166,6 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
-    },
-    {
-      "id": "B2Is5UK",
-      "superhero": "Laura",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Picón",
-      "first_appearance": "Cómic 2021",
-      "characters": "Laura",
-      "alt_img": "https://www.kamekame.es/33327-large_default/spiderwoman-03-vuelta-a-los-origenes-comic.jpg"
     }
   ]
 }
