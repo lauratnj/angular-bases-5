@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { Observable, catchError, of, tap, map } from 'rxjs';
+
 import { environments } from 'src/environments/environments';
 import { User } from '../interfaces/user.interfaces';
-import { Observable, catchError, of, tap, map } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -31,9 +33,9 @@ export class AuthService {
   }
 
 
-  checkAuthentication(): Observable<boolean> | boolean {
+  checkAuthentication(): Observable<boolean> {
 
-    if ( !localStorage.getItem('token') ) return false;
+    if ( !localStorage.getItem('token') ) return of(false);
 
     const token = localStorage.getItem('token');
 
